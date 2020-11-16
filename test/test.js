@@ -83,6 +83,73 @@ describe('isStartWithUpper', () => {
     test('no argument returns false - falsy', () => {
       expect(isStartWithUpper()).not.toBe(true);
     })
+
+    describe('input validation', () => {
+      test('pass an object returns false', () => {
+        expect(isStartWithUpper({})).toBe(false);
+      })
+
+      test('pass an object returns false - falsy', () => {
+        expect(isStartWithUpper({})).not.toBe(true);
+      })
+
+      test('pass an array returns false', () => {
+        expect(isStartWithUpper([])).toBe(false);
+      })
+
+      test('pass an array returns false - falsy', () => {
+        expect(isStartWithUpper([])).not.toBe(true);
+      })
+
+      test('pass undefined returns false', () => {
+        expect(isStartWithUpper(undefined)).toBe(false);
+      })
+
+      test('pass undefined returns false - falsy', () => {
+        expect(isStartWithUpper(undefined)).not.toBe(true);
+      })
+
+      test('pass null returns false', () => {
+        expect(isStartWithUpper(null)).toBe(false);
+      })
+
+      test('pass null returns false - falsy', () => {
+        expect(isStartWithUpper(null)).not.toBe(true);
+      })
+
+      test('pass boolean returns false', () => {
+        expect(isStartWithUpper(false)).toBe(false);
+      })
+
+      test('pass boolean returns false - falsy', () => {
+        expect(isStartWithUpper(false)).not.toBe(true);
+      })
+
+      test('pass number returns false', () => {
+        expect(isStartWithUpper(123)).toBe(false);
+      })
+
+      test('pass number returns false - falsy', () => {
+        expect(isStartWithUpper(123)).not.toBe(true);
+      })
+
+      test('pass function returns false', () => {
+        expect(isStartWithUpper(function fName() {})).toBe(false);
+      })
+
+      test('pass function returns false - falsy', () => {
+        expect(isStartWithUpper(function fName() {})).not.toBe(true);
+      })
+
+      test('pass symbol returns false', () => {
+        expect(isStartWithUpper(Symbol('sym'))).toBe(false);
+      })
+
+      test('pass symbol returns false - falsy', () => {
+        expect(isStartWithUpper(Symbol('sym'))).not.toBe(true);
+      })
+
+    })
   })
 
   describe('real world examples', () => {
