@@ -11,9 +11,15 @@
 
 ### Usage
 - `git checkout is_upper_case`
-- `npm install`
 
+```JavaScript
+const isStartWithUpper = require('../src/isStartingWithUpperCase');
+
+isStartWithUpper('GitHub') // true
+isStartWithUpper('gitHub') // false
+```
 ### Run tests
+- `npm install`
 - `npm test`
 
 ## Authors
