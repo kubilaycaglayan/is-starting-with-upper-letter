@@ -1,4 +1,4 @@
-const isStartWithUpper = require('./main');
+const isStartWithUpper = require('../src/isStartingWithUpperCase');
 
 describe('isStartWithUpper', () => {
   describe('returns true if the first letter of the string is uppercase', () => {
